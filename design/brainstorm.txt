@@ -4,6 +4,10 @@ Ideas for a project:
     - yap mode
     - ui customization
     - gif support
+- video calls (webrtc)
+
+- web platform for doing homework together (chat, groups, video calls)
+
 - crime alert (2d map with live pings)
 - suggest disease based on symptoms
 - Shazam clone
