@@ -1,4 +1,4 @@
-# Design Document: StdyBdy - Collaborative Learning Platform
+# Design Document: StdyBddy - Collaborative Learning Platform
 
 ## 1. Introduction
 StdyBddy is a chat application designed for students to collaborate, learn together, and assist each other with homework. This platform aims to create a supportive learning environment through text-based communication, video calls, and shared study spaces.
