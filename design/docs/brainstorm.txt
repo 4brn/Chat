@@ -18,3 +18,6 @@ Ideas for a project:
 Interesting public apis:
 https://weatherstack.com/ (real time weather info)
 https://developer.tomtom.com/
+
+Authentication:
+https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html
