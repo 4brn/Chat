@@ -1,62 +1,107 @@
-# Design Document: StdyBddy - Collaborative Learning Platform
+# Design Document: StddyBuddy - Collaborative Learning Platform
 
 ## 1. Introduction
-StdyBddy is a chat application designed for students to collaborate, learn together, and assist each other with homework. This platform aims to create a supportive learning environment through text-based communication, video calls, and shared study spaces.
+StudyBuddy is a web platform designed to facilitate collaborative learning through study groups. The platform enables students to communicate via text, audio, and video while sharing study materials.
 
 ## 2. Key Features
-- User registration and authentication
-- One-on-one and group text chats
-- Video calls using WebRTC
-- User activity status (online, offline, away)
-- Group creation and management
-- Basic file sharing for homework collaboration
+- User authentication system
+- Study group management
+- Tri-modal communication (text, audio, video)
+- File sharing within study groups
+- Message history storage
 
 ## 3. System Architecture
-- Frontend: React
-- Backend: Go
+- Frontend: Next.js with TypeScript
+- Backend: Node.js
 - Database: PostgreSQL
-- Real-time communication: WebSockets for chat, WebRTC for video calls
+- Real-time communication: WebRTC, WebSocket
 
 ## 4. Data Models
-- User: id, username, email, password_hash, status
-- Chat: id, type (one-on-one/group), name, created_at
-- Message: id, chat_id, user_id, content, timestamp
-- Group: id, name, description, created_at
-- GroupMember: group_id, user_id, role (admin/member)
+```typescript
+User {
+  id: string
+  username: string
+  email: string
+  passwordHash: string
+}
+
+StudyGroup {
+  id: string
+  name: string
+  description: string
+  createdAt: Date
+  ownerId: string
+}
+
+GroupMember {
+  groupId: string
+  userId: string
+  role: 'admin' | 'member'
+}
+
+Message {
+  id: string
+  groupId: string
+  userId: string
+  content: string
+  timestamp: Date
+  type: 'text' | 'file'
+}
+
+File {
+  id: string
+  groupId: string
+  userId: string
+  filename: string
+  url: string
+  uploadedAt: Date
+}
+```
 
 ## 5. API Endpoints
-- /auth: User authentication and registration
-- /users: User profile management
-- /chats: Create, read, update, and delete chats
-- /messages: Send and retrieve messages
-- /groups: Group management
-- /calls: Initiate and manage video calls
+- /api/auth: Authentication routes
+- /api/groups: Study group management
+- /api/messages: Message handling
+- /api/files: File upload and management
+- /api/rtc: WebRTC signaling
 
-## 6. Frontend Components
-- Login/Registration pages
-- Chat interface (text and video)
-- User profile page
-- Group management interface
-- Settings page
+## 6. Frontend Structure
+Pages:
+- /login & /register
+- /groups: Study group listing
+- /groups/[id]: Group chat and collaboration space
+- /profile: User settings
 
-## 7. Real-time Communication
-- WebSockets for instant messaging
-- WebRTC for peer-to-peer video calls
+Components:
+- ChatInterface
+- AudioVideoCall
+- FileUploader
+- GroupManager
 
-## 8. Security Measures
-- HTTPS for secure communication
-- JWT for authentication
-- Input validation and sanitization
+## 7. Real-time Features
+- WebSocket for instant messaging
+- WebRTC for audio/video calls
+- Real-time file sharing updates
 
-## 9. Scalability Considerations
-- Efficient database indexing
-- Possible future implementation of caching (e.g., Redis)
+## 8. Security
+- JWT authentication
+- HTTPS
+- Input validation
+- File upload restrictions
 
-## 10. Development Roadmap
-1. Backend development (1 month)
-2. Frontend development (1 month)
-3. Integration and testing (2 weeks)
-4. Deployment and final adjustments (1 week)
+## 9. Storage
+- Message history in PostgreSQL
+- File storage using cloud storage (e.g., AWS S3)
 
-## 11. Conclusion
-This design document outlines a simple yet functional chat application for student collaboration. It focuses on essential features to ensure manageable development for a high school diploma project.
+## 10. Technical Stack Details
+- Next.js 14 with App Router
+- TypeScript for type safety
+- Tailwind CSS for styling
+- PostgreSQL with Prisma ORM
+- WebRTC for real-time communication
+
+## 11. Testing Strategy
+- Unit tests with Jest
+- E2E tests with Cypress
+- Manual testing for WebRTC features
+```

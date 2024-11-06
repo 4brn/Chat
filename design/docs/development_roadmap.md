@@ -1,76 +1,70 @@
-# Comprehensive Development Roadmap for StdyBddy
+# Development Roadmap for StudyBuddy
 
-## Phase 1: Planning and Setup (2 weeks)
-1. Finalize project requirements and scope
-2. Set up development environment
-3. Choose and set up version control system (e.g., Git)
-4. Create project structure
-5. Set up project management tools (e.g., Jira, Trello)
+## Phase 1: Project Setup (1 week)
+- Set up Next.js project with TypeScript
+- Configure PostgreSQL database
+- Set up development environment
+- Initialize version control
 
-## Phase 2: Backend Development (6 weeks)
-1. Week 1-2: Database setup and implementation
-   - Set up PostgreSQL database
-   - Implement data models (User, Chat, Message, Group, GroupMember)
-   - Create database migrations
+## Phase 2: Core Features Development (4 weeks)
 
-2. Week 3-4: Core API development
-   - Implement user authentication and registration
-   - Develop chat and message handling
-   - Create group management functionality
+### Week 1: Authentication
+- Implement user registration
+- Implement login system
+- Create user profile management
 
-3. Week 5-6: Real-time communication and advanced features
-   - Implement WebSocket for real-time messaging
-   - Set up WebRTC for video calls
-   - Develop file sharing functionality
-   - Implement user activity status
+### Week 2: Study Groups
+- Create group management system
+- Implement group joining/leaving
+- Develop group admin features
 
-## Phase 3: Frontend Development (6 weeks)
-1. Week 1-2: Setup and basic components
-   - Set up React project
-   - Develop login and registration pages
-   - Create basic layout and navigation
+### Week 3: Text Communication
+- Implement real-time messaging
+- Develop message storage system
+- Create message history viewer
 
-2. Week 3-4: Chat interface and user profile
-   - Implement text chat interface
-   - Develop user profile page
-   - Create settings page
+### Week 4: File Sharing
+- Implement file upload system
+- Create file sharing interface
+- Develop file management features
 
-3. Week 5-6: Advanced features and polish
-   - Implement video call interface
-   - Develop group management interface
-   - Create file sharing component
-   - Polish UI/UX
+## Phase 3: Audio/Video Features (3 weeks)
 
-## Phase 4: Integration and Testing (3 weeks)
-1. Week 1: Backend-Frontend integration
-   - Connect frontend components to API endpoints
-   - Implement state management (e.g., Redux)
+### Week 1: WebRTC Setup
+- Implement WebRTC signaling server
+- Create basic audio/video connection
 
-2. Week 2: Testing
-   - Write and run unit tests for backend and frontend
-   - Perform integration testing
-   - Conduct user acceptance testing
+### Week 2: Audio/Video Interface
+- Develop call interface
+- Implement audio controls
+- Create video display components
 
-3. Week 3: Bug fixes and optimizations
-   - Address issues found during testing
-   - Optimize performance
-   - Refine error handling and logging
+### Week 3: A/V Feature Polish
+- Add call quality controls
+- Implement screen sharing
+- Create connection status indicators
 
-## Phase 5: Deployment and Final Adjustments (2 weeks)
-1. Week 1: Deployment
-   - Set up production environment
-   - Deploy backend to cloud platform (e.g., AWS, Google Cloud)
-   - Deploy frontend to web hosting service
-   - Configure HTTPS and security measures
+## Phase 4: Testing and Refinement (2 weeks)
 
-2. Week 2: Final adjustments and documentation
-   - Monitor application performance
-   - Make final adjustments based on deployment
-   - Write user documentation
-   - Prepare presentation for project showcase
+### Week 1: Testing
+- Write and run unit tests
+- Perform integration testing
+- Test real-time features
 
-## Phase 6: Project Presentation and Submission (1 week)
-1. Prepare and rehearse project presentation
-2. Create project demonstration video
-3. Compile all project documentation
-4. Submit final project deliverables
+### Week 2: Bug Fixes
+- Address identified issues
+- Performance optimization
+- Security auditing
+
+## Phase 5: Documentation and Deployment (1 week)
+- Write technical documentation
+- Deploy to production
+- Create user guide
+- Prepare project presentation
+
+## Phase 6: Project Submission
+- Final testing
+- Documentation review
+- Project presentation
+- Code submission
+```
