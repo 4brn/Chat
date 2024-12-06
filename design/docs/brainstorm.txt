@@ -14,7 +14,6 @@ Ideas for a project:
 - password manager // pass; browser extension
 - bittorrent client (https://blog.jse.li/posts/torrent/)
 
-
 Interesting public apis:
 https://weatherstack.com/ (real time weather info)
 https://developer.tomtom.com/
